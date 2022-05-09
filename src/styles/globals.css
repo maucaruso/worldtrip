@@ -1,0 +1,17 @@
+body .swiper-button-next, body .swiper-button-prev {
+  color: #FFBA08;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+}
+
+body .swiper-pagination-bullet {
+  background-color: var(--chakra-colors-gray-400);
+  opacity: 1;
+}
+
+body .swiper-pagination-bullet-active {
+  background-color: var(--chakra-colors-orange-500);
+} 
