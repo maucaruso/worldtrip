@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-import { Box, Flex, Image, Text, theme } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { theme } from "../styles/theme";
 import { Header } from "../components/Header";
 import ShelfItem from "../components/ShelfItem";
 import SliderItem from "../components/SliderItem";
@@ -105,8 +106,27 @@ const Home: NextPage = () => {
           <SwiperSlide>
             <SliderItem
               backgroundImage="europa.jpg"
-              title="Europa"
-              subtitle="O continente mais antigo."
+              title="América do Norte"
+              subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              href="/region/america-do-norte"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SliderItem
+              backgroundImage="europa.jpg"
+              title="América do Sul"
+              subtitle="Etiam fermentum est eget mi eleifend porttitor."
+              href="/region/america-do-sul"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SliderItem
+              backgroundImage="europa.jpg"
+              title="Ásia"
+              subtitle="Sed sodales, est id feugiat convallis, nunc mauris ornare augue, vulputate pulvinar elit mauris quis quam."
+              href="/region/asia"
             />
           </SwiperSlide>
 
@@ -114,7 +134,17 @@ const Home: NextPage = () => {
             <SliderItem
               backgroundImage="europa.jpg"
               title="Europa"
-              subtitle="O continente mais antigo."
+              subtitle="Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae."
+              href="/region/europa"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SliderItem
+              backgroundImage="europa.jpg"
+              title="Oceania"
+              subtitle="Phasellus non fringilla mauris, at luctus felis. Maecenas mattis finibus ante a ultricies."
+              href="/region/oceania"
             />
           </SwiperSlide>
         </Swiper>
