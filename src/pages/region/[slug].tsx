@@ -1,7 +1,9 @@
-import { Box, Flex, Text, Tooltip } from "@chakra-ui/react";
+import { Box, Flex, Grid, Text, Tooltip } from "@chakra-ui/react";
 import { theme } from "../../styles/theme";
 import { Header } from "../../components/Header";
 import Image from "next/image";
+import InfoNumbers from "../../components/InfoNumber";
+import CardItem from "../../components/CardItem";
 
 export default function Region() {
   return (
@@ -47,74 +49,67 @@ export default function Region() {
         </Text>
 
         <Flex justify="center" width="100%" gap={10}>
-          <Box>
-            <Text
-              fontSize="2xl"
-              color={theme.colors.gray[500]}
-              fontWeight={600}
-              textAlign="center"
-            >
-              <Box
-                as="span"
-                color={theme.colors.orange[500]}
-                display="block"
-                fontSize="5xl"
-              >
-                50
-              </Box>{" "}
-              países
-            </Text>
-          </Box>
+          <InfoNumbers total_number="50" description="países" />
 
-          <Box>
-            <Text
-              fontSize="2xl"
-              color={theme.colors.gray[500]}
-              fontWeight={600}
-              textAlign="center"
-            >
-              <Box
-                as="span"
-                color={theme.colors.orange[500]}
-                display="block"
-                fontSize="5xl"
-              >
-                50
-              </Box>{" "}
-              línguas
-            </Text>
-          </Box>
+          <InfoNumbers total_number="50" description="línguas" />
 
-          <Box>
-            <Text
-              fontSize="2xl"
-              color={theme.colors.gray[500]}
-              fontWeight={600}
-              textAlign="center"
-            >
-              <Box
-                as="span"
-                color={theme.colors.orange[500]}
-                display="block"
-                fontSize="5xl"
-              >
-                50
-              </Box>{" "}
-              cidades +100
-              <Tooltip label="Hey, I'm here!" aria-label="A tooltip">
-                <Box as="span" ml="0.3125rem">
-                  <Image
-                    src="/info.svg"
-                    alt="Voltar"
-                    width="16px"
-                    height="16px"
-                  />
-                </Box>
-              </Tooltip>
-            </Text>
-          </Box>
+          <InfoNumbers
+            total_number="50"
+            description="cidades +100"
+            details="Hey, I'm here!"
+          />
         </Flex>
       </Flex>
+
+      <Box
+        maxWidth={1160}
+        mx="auto"
+        fontSize="4xl"
+        fontWeight={500}
+        color={theme.colors.gray[500]}
+        mb={9}
+      >
+        <Text as="h2" mb={10}>
+          Cidades +100
+        </Text>
+
+        <Grid templateColumns='repeat(4, 1fr)' gap="1.8125rem">
+          <CardItem
+            image="/londres.png"
+            title="Londres"
+            description="Reino Unido"
+            flag="/londres-flag.png"
+          />
+
+          <CardItem
+            image="/londres.png"
+            title="Londres"
+            description="Reino Unido"
+            flag="/londres-flag.png"
+          />
+
+          <CardItem
+            image="/londres.png"
+            title="Londres"
+            description="Reino Unido"
+            flag="/londres-flag.png"
+          />
+
+          <CardItem
+            image="/londres.png"
+            title="Londres"
+            description="Reino Unido"
+            flag="/londres-flag.png"
+          />
+
+          <CardItem
+            image="/londres.png"
+            title="Londres"
+            description="Reino Unido"
+            flag="/londres-flag.png"
+          />
+        </Grid>
+      </Box>
     </>
   );
 }
