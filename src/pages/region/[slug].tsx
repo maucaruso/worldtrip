@@ -2,7 +2,7 @@ import { Box, Flex, Grid, Text, Tooltip } from "@chakra-ui/react";
 import { theme } from "../../styles/theme";
 import { Header } from "../../components/Header";
 import Image from "next/image";
-import InfoNumbers from "../../components/InfoNumber";
+import InfoNumber from "../../components/InfoNumber";
 import CardItem from "../../components/CardItem";
 
 export default function Region() {
@@ -16,17 +16,18 @@ export default function Region() {
         backgroundSize="cover"
       >
         <Flex
-          align="end"
+          align={["center", "end"]}
+          justifyContent={["center", "unset"]}
           maxWidth={1160}
           mx="auto"
-          minHeight={500}
-          pb="3.75rem"
+          minHeight={[250, 500]}
+          pb={["0", "3.75rem"]}
         >
           <Text
             align="center"
             as="h1"
             color={theme.colors.gray[200]}
-            fontSize="5xl"
+            fontSize={["1.75rem", "5xl"]}
             fontWeight={600}
           >
             Europa
@@ -36,24 +37,36 @@ export default function Region() {
 
       <Flex
         justify="space-between"
+        flexWrap={["wrap", "unset"]}
         align="center"
         maxWidth={1160}
         mx="auto"
-        py={20}
+        px={["1rem", 0]}
+        pt={["1.5rem", 20]}
+        pb={["1rem", 20]}
+        rowGap={["1rem", 0]}
       >
-        <Text fontSize="2xl" color={theme.colors.gray[500]} width="100%">
+        <Text
+          fontSize={["0.875rem", "2xl"]}
+          color={theme.colors.gray[500]}
+          width="100%"
+        >
           A Europa é, por convenção, um dos seis continentes do mundo.
           Compreendendo a península ocidental da Eurásia, a Europa geralmente
           divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
           rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
         </Text>
 
-        <Flex justify="center" width="100%" gap={10}>
-          <InfoNumbers total_number="50" description="países" />
+        <Flex
+          width="100%"
+          gap={[0, 10]}
+          justifyContent={["space-between", "center"]}
+        >
+          <InfoNumber total_number="50" description="países" />
 
-          <InfoNumbers total_number="50" description="línguas" />
+          <InfoNumber total_number="50" description="línguas" />
 
-          <InfoNumbers
+          <InfoNumber
             total_number="50"
             description="cidades +100"
             details="Hey, I'm here!"
@@ -68,12 +81,13 @@ export default function Region() {
         fontWeight={500}
         color={theme.colors.gray[500]}
         mb={9}
+        px={["1rem", 0]}
       >
-        <Text as="h2" mb={10}>
+        <Text as="h2" mb={["1.25rem", 10]} fontSize="1.5rem" >
           Cidades +100
         </Text>
 
-        <Grid templateColumns='repeat(4, 1fr)' gap="1.8125rem">
+        <Grid templateColumns={["1fr", "repeat(4, 1fr)"]} gap="1.8125rem">
           <CardItem
             image="/londres.png"
             title="Londres"

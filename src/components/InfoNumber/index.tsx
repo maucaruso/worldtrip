@@ -8,20 +8,21 @@ interface InfoNumberProps {
   details?: string;
 }
 
-export default function InfoNumbers(props: InfoNumberProps) {
+export default function InfoNumber(props: InfoNumberProps) {
   return (
     <Box>
       <Text
-        fontSize="2xl"
+        fontSize={["1.125rem", "2xl"]}
         color={theme.colors.gray[500]}
-        fontWeight={600}
-        textAlign="center"
+        fontWeight={[400, 600]}
+        textAlign={["left", "center"]}
       >
         <Box
           as="span"
           color={theme.colors.orange[500]}
           display="block"
-          fontSize="5xl"
+          fontSize={["1.5rem", "5xl"]}
+          fontWeight={600}
         >
           {props.total_number}
         </Box>{" "}

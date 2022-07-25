@@ -17,6 +17,7 @@ export default function CardItem(props: CardItemProps) {
       width="100%"
       maxWidth="256px"
       overflow="hidden"
+      mx="auto"
     >
       <Box height="max-content" display="flex">
         <Image
