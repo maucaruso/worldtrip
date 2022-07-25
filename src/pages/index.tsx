@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Hide, Image, Text } from "@chakra-ui/react";
 import { theme } from "../styles/theme";
 import { Header } from "../components/Header";
 import ShelfItem from "../components/ShelfItem";
@@ -26,13 +26,14 @@ const Home: NextPage = () => {
           align="center"
           maxWidth={1160}
           mx="auto"
-          minHeight={335}
+          minHeight={[163, 335]}
+          px={["20px", 0]}
         >
           <Box>
             <Text
               as="h1"
               color={theme.colors.gray[200]}
-              fontSize="4xl"
+              fontSize={[20, "4xl"]}
               fontWeight={500}
             >
               5 continentes, <br /> infinitas possibilidades
@@ -42,24 +43,28 @@ const Home: NextPage = () => {
               as="h2"
               color={theme.colors.gray[300]}
               mt="1.25rem"
-              fontSize="1.25rem"
+              fontSize={["sm", "1.25rem"]}
               maxWidth={524}
             >
               Chegou a hora de tirar do papel a viagem que você sempre sonhou.
             </Text>
           </Box>
 
-          <Image src="airplane.svg" alt="Avião amarelo" mt="20" mb="-20" />
+          <Hide below="md">
+            <Image src="airplane.svg" alt="Avião amarelo" mt="20" mb="-20" />
+          </Hide>
         </Flex>
       </Box>
 
       <Flex
-        justify="space-between"
+        justify="center"
+        rowGap={["20px", ""]}
         align="center"
         maxWidth={1160}
         mx="auto"
-        mt="7.125rem"
+        mt={["2.25rem", "7.125rem"]}
         pb="3.75rem"
+        flexWrap={["wrap", "unset"]}
         position="relative"
         _after={{
           content: `""`,
@@ -84,14 +89,14 @@ const Home: NextPage = () => {
         <ShelfItem IconPath="earth.svg" TextItem="e mais..." />
       </Flex>
 
-      <Box maxWidth={1240} mx="auto" mt="3.25rem" mb="2.5rem">
+      <Box maxWidth={1240} mx="auto" mt={["1.5rem", "3.25rem"]} mb={["1.5rem", "2.5rem"]}>
         <Text
           color={theme.colors.gray[500]}
           textAlign="center"
           fontWeight={500}
-          fontSize="2.25rem"
-          lineHeight="3.375rem"
-          mb="3.25rem"
+          fontSize={[20, "2.25rem"]}
+          lineHeight={["1.875rem", "3.375rem"]}
+          mb={["1.25rem", "3.25rem"]}
         >
           Vamos nessa? <br /> Então escolha seu continente
         </Text>

@@ -18,7 +18,7 @@ export default function SliderItem({
     <Flex
       textAlign="center"
       backgroundImage={backgroundImage}
-      minHeight="450"
+      minHeight={["250", "450"]}
       justify="center"
       align="center"
       flexDirection="column"
@@ -27,7 +27,7 @@ export default function SliderItem({
         <a>
           <Text
             color={theme.colors.gray[200]}
-            fontSize="3rem"
+            fontSize={["1.5rem", "3rem"]}
             fontWeight="bold"
           >
             {title}
@@ -35,8 +35,10 @@ export default function SliderItem({
           <Text
             color={theme.colors.gray[300]}
             mt="1rem"
-            fontSize="1.5rem"
+            fontSize={["0.875rem", "1.5rem"]}
+            maxWidth={["80%", "unset"]}
             fontWeight="bold"
+            mx="auto"
           >
             {subtitle}
           </Text>
